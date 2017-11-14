@@ -1,0 +1,20 @@
+#Put this file in your public_html folder to 
+#enable PHP warnings and error messages, as 
+#well as PHP short tags 
+#Allows for errors to be printed to the screen 
+#IMPORTANT: Disable unless debugging! 
+php_flag display_errors On
+
+#Allows for PHP's startup sequence error to be displayed
+#IMPORTANT: Disable unless debugging! 
+php_value display_startup_errors 1 
+
+#Allows for clickable links to be included in error messages
+php_value html_errors On 
+
+#Enable use of <? ... ?> format to declare PHP script 
+php_value short_open_tag On
+
+#Set default timezone to allow for ease of use 
+#for date and time functions 
+php_value date.timezone "UTC"
