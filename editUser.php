@@ -2,16 +2,6 @@
 include "header.php";
 
 ?>
-<html>
-  <head>
-    <title>Voting Poll</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-  </head>
-  <body>
-    <div id="container">
-      <div id="header">
-        <h1><img src="cybercat1.jpg" title=" " alt=" " /></h1>
-      </div>
       <div id="content">
         <div id="nav">
           <h3>Navigation </h3>

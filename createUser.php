@@ -23,6 +23,7 @@
         {
 	      	
           validate();
+					die();
         }
         
         function validate()

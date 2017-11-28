@@ -1,6 +1,17 @@
 <?php
 include "header.php";
-
+?>
+<div id="content">
+        <div id="nav">
+          <h3>Navigation </h3>
+          <ul>
+						<li><a href="main.php">Return to Poll</a></li>
+            <li><a href="index.php">Main</a></li>
+          </ul>
+        </div>
+        
+        <div id="main">
+<?php
 if(isset($_POST['poll'], $_POST['choice'])) {
 	$poll = $_POST['poll'];
 	$choice = $_POST['choice'];
@@ -22,10 +33,8 @@ if(isset($_POST['poll'], $_POST['choice'])) {
 				
 		");
 	$voteQuery -> execute(array('user' => $_SESSION['user_id'], 'poll' => $poll, 'choice' => $choice));
-		header('Location: poll.php?poll=' . $poll);
+
 }
 
-header('Location: main.php');
-
 ?>
-     
+   <h1>Thank you for your vote</h1>  

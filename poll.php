@@ -1,22 +1,5 @@
 <?php
-session_start();
-$_SESSSION['user_id'] =1;
-
-$DB_host = "localhost";
-$DB_user = "gillilandr";
-$DB_pass = "12345";
-$DB_name = "gillilandr";
-
-try
-{
-	$db = new PDO("mysql:host={$DB_host};dbname={$DB_name}",$DB_user,$DB_pass);
-	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-}
-catch(PDOException $e)
-{
-	echo $e->getMessage();
-}
-
+include "header.php";
 
 if(!isset($_GET['poll'])) {
 	header('Location: main.php');	
@@ -85,16 +68,6 @@ if(!isset($_GET['poll'])) {
 }
 
 ?>
-<html>
-  <head>
-    <title>Voting Poll</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-  </head>
-  <body>
-    <div id="container">
-      <div id="header">
-        <h1><img src="cybercat1.jpg" title=" " alt=" " /></h1>
-      </div>
       <div id="content">
         <div id="nav">
           <h3>Navigation </h3>
@@ -117,7 +90,7 @@ if(!isset($_GET['poll'])) {
 		 
 		 <?php if($completed): ?>
 		 	<p>
-				 You have completed the poll, Thank You
+				 You have completed the poll, Here are the results Thank You
 		 </p>
 		 <ul>
 			 

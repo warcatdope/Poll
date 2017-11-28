@@ -1,6 +1,6 @@
 <?php
 session_start();
-$_SESSION['user_id'] = 1;
+//$_SESSION['user_id'] = 1;
 
 $DB_host = "localhost";
 $DB_user = "gillilandr";

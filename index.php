@@ -5,6 +5,7 @@ include "header.php";
         <div id="nav">
           <h3>Navigation </h3>
           <ul>
+						
             <li><a href="createUser.php">Create New User</a></li>
           </ul>
         </div>
@@ -59,7 +60,8 @@ include "header.php";
 				$_SESSION['lastname'] = $row['family_name'];
 				$_SESSION['username'] = $row['username'];
 				$_SESSION['email'] = $row['email'];
-				$_SESSION['id'] = $row['id'];
+				//change to user_id
+				$_SESSION['user_id'] = $row['id'];
 				$_SESSION['password'] = $row['password'];
 				
 			}
@@ -107,7 +109,7 @@ include "header.php";
 			<form name='home' method='post' action='main.php'>
 			<input type='submit' value='View Polls'	name='home'>
 			</form>
-			<form name='home' method='post' action='createPoll.php'>
+			<form name='home' action='create_poll.php'>
 				<input type='submit' value='Create a Poll' name='home'>
 			</form>
 		<form name='logout' method='post' action='<?php echo $_SERVER['PHP_SELF']; ?>' >

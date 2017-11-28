@@ -16,6 +16,7 @@ while($row = $pollsQuery->fetchObject()) {
           <h3>Navigation </h3>
           <ul>
             <li><a href="index.php">Main</a></li>
+						<li><a href="editUser.php">Edit Account</a></li>
           </ul>
         </div>
         
